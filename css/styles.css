@@ -1676,3 +1676,90 @@ h3 {
         list-style: none;
     }
 }
+
+/* ==========================================
+   HEADER Y MENÚ RESPONSIVE PARA CELULARES
+   ========================================== */
+
+.site-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem 1.2rem;
+    position: relative;
+}
+
+.logo {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: #2C5F2D;
+    text-decoration: none;
+    white-space: nowrap; /* Evita que 'Trancas Viejas' se rompa en dos renglones */
+}
+
+/* El botón de hamburguesa se oculta en computadoras */
+.menu-toggle {
+    display: none;
+}
+
+/* --- REGLAS EXCLUSIVAS PARA PANTALLAS DE CELULAR --- */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border: 1px solid #CBD5E1;
+        padding: 0.4rem 0.6rem;
+        border-radius: 6px;
+        cursor: pointer;
+    }
+
+    .hamburger, .hamburger::before, .hamburger::after {
+        content: '';
+        display: block;
+        background: #2C5F2D;
+        height: 2px;
+        width: 18px;
+        position: relative;
+        transition: all 0.3s ease;
+    }
+
+    .hamburger::before { top: -6px; position: absolute; }
+    .hamburger::after { top: 6px; position: absolute; }
+
+    /* Oculta los enlaces en el celular hasta que se toca el botón */
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #ffffff;
+        box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        padding: 1.2rem 0;
+    }
+
+    /* Muestra la lista desplegable al presionar el menú */
+    .site-nav.active {
+        display: block;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+}

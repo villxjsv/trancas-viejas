@@ -852,6 +852,14 @@ p {
     padding: 1.2rem;
 }
 
+/*
+   Encuadre para fotos verticales cuyo sujeto está en la parte
+   de arriba y se cortaba con el recorte centrado.
+*/
+.gallery-card-image img.img-up {
+    object-position: center 25%;
+}
+
 
 /*
    Si una sección tiene una sola tarjeta,
@@ -884,6 +892,23 @@ p {
     object-fit: cover;
 
     transition: transform 0.4s ease;
+}
+
+
+/*
+   Lugares: se iguala la transición de las tarjetas a la de Galería
+   para que la animación al pasar el cursor sea exactamente la misma.
+*/
+
+#lugares-destacados .card {
+    transition:
+        transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.3s ease;
+}
+
+#lugares-destacados .card-image-wrapper img {
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 
@@ -920,6 +945,24 @@ p {
     }
 
     .gallery-card:hover .card-image img {
+        transform: scale(1.05);
+    }
+
+    /*
+       Lugares: misma animación que la sección de Galería
+       (las tarjetas usan .card / .card-image-wrapper).
+    */
+    #lugares-destacados .card:hover,
+    #lugares-destacados .card:focus-within {
+        transform: translateY(-6px);
+
+        box-shadow: 0 16px 30px -10px rgba(0, 0, 0, 0.15);
+
+        border-color: var(--color-primary);
+    }
+
+    #lugares-destacados .card:hover .card-image-wrapper img,
+    #lugares-destacados .card:focus-within .card-image-wrapper img {
         transform: scale(1.05);
     }
 

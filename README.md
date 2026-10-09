@@ -32,7 +32,6 @@ trancas-viejas/
 │
 ├── img/
 │   ├── portada/
-│   ├── comunidad/
 │   ├── historia/
 │   ├── lugares/
 │   ├── eventos/
@@ -54,16 +53,6 @@ Archivo previsto:
 
 ```text
 hero-principal.jpg
-```
-
-### `img/comunidad/`
-
-Fotografías generales de la comunidad.
-
-Archivo previsto:
-
-```text
-comunidad-intro.jpg
 ```
 
 ### `img/historia/`

@@ -35,8 +35,7 @@ trancas-viejas/
 │   ├── historia/
 │   ├── lugares/
 │   ├── eventos/
-│   ├── galeria/
-│   └── placeholders/
+│   └── galeria/
 │
 └── README.md
 ```
@@ -109,12 +108,6 @@ galeria-tradicion-1.jpg
 galeria-tradicion-2.jpg
 galeria-tradicion-3.jpg
 ```
-
-### `img/placeholders/`
-
-Contiene las imágenes SVG provisionales utilizadas mientras se recopilan fotografías reales.
-
-Estas imágenes se conservarán como respaldo y no representan fotografías reales de Trancas Viejas.
 
 ## Fotografías reales
 

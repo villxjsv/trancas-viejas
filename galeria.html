@@ -10,7 +10,6 @@
     <meta name="description"
         content="Galería fotográfica de paisajes, flora, fauna, cultivos y el entorno de Trancas Viejas, Moloacán, Veracruz.">
 
-    <!-- Open Graph / Tarjeta al compartir (WhatsApp, Facebook, etc.) -->
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="Trancas Viejas">
     <meta property="og:locale" content="es_MX">
@@ -27,7 +26,6 @@
         content="Galería fotográfica de paisajes, flora, fauna, cultivos y el entorno de Trancas Viejas, Moloacán, Veracruz.">
     <meta name="twitter:image" content="https://villxjsv.github.io/trancas-viejas/img/portada/hero-principal.jpg">
 
-    <!-- Tipografías -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -35,18 +33,12 @@
         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
         rel="stylesheet">
 
-    <!-- CSS principal -->
-    <!-- Favicon -->
     <link rel="icon" href="favicon.ico" sizes="any">
     <link rel="icon" type="image/png" href="favicon.png">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- AJUSTES EXCLUSIVOS DE LA GALERÍA -->
     <style>
-        /* ==========================================================
-           GALERÍA
-           ========================================================== */
 
         .gallery-grid {
             display: grid !important;
@@ -55,23 +47,12 @@
             align-items: start !important;
         }
 
-
-        /* ==========================================================
-           TARJETAS
-           ========================================================== */
-
         .gallery-card {
             height: auto !important;
             min-height: 0 !important;
             align-self: start !important;
             overflow: hidden !important;
         }
-
-
-        /* ==========================================================
-           CONTENEDOR DE IMAGEN
-           Todas las imágenes tienen el mismo espacio visual
-           ========================================================== */
 
         .gallery-card-image {
             width: 100% !important;
@@ -89,20 +70,10 @@
             background-color: #F4F1EA !important;
         }
 
-
-        /* ==========================================================
-           IMÁGENES
-           ========================================================== */
-
         .gallery-card-image img {
             width: 100% !important;
             height: 100% !important;
 
-            /*
-             * cover hace que TODAS las fotos llenen el marco,
-             * recortando un poco los bordes. Así la galería se ve
-             * uniforme y profesional, igual que la sección Lugares.
-             */
             object-fit: cover !important;
 
             object-position: center !important;
@@ -113,21 +84,9 @@
                 transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
         }
 
-
-        /*
-         * Encuadre superior.
-         * Para fotos verticales cuyo sujeto importante está arriba
-         * (por ejemplo, la cabeza del tecolote), así nunca se corta.
-         */
-
         .gallery-card-image img.img-top {
             object-position: center top !important;
         }
-
-
-        /* ==========================================================
-           CONTENIDO DE LAS TARJETAS
-           ========================================================== */
 
         .gallery-card-body {
             height: auto !important;
@@ -147,14 +106,6 @@
             flex: none !important;
         }
 
-
-        /* ==========================================================
-           ANIMACIONES
-           SOLO EN DISPOSITIVOS CON MOUSE
-           
-           NO eliminamos tus animaciones.
-           ========================================================== */
-
         @media (hover: hover) and (pointer: fine) {
 
             .gallery-card:hover {
@@ -172,11 +123,6 @@
 
         }
 
-
-        /* ==========================================================
-           TABLET
-           ========================================================== */
-
         @media (max-width: 1023px) {
 
             .gallery-grid {
@@ -185,11 +131,6 @@
             }
 
         }
-
-
-        /* ==========================================================
-           CELULAR
-           ========================================================== */
 
         @media (max-width: 600px) {
 
@@ -208,12 +149,7 @@
     </style>
 </head>
 
-
 <body>
-
-    <!-- ==========================================================
-         HEADER
-         ========================================================== -->
 
     <header class="site-header">
 
@@ -228,7 +164,6 @@
                 <span class="hamburger"></span>
 
             </button>
-
 
             <nav class="site-nav" id="primary-menu" aria-label="Navegación principal">
 
@@ -272,16 +207,7 @@
 
     </header>
 
-
-
-    <!-- ==========================================================
-         CONTENIDO PRINCIPAL
-         ========================================================== -->
-
     <main>
-
-
-        <!-- ENCABEZADO -->
 
         <section class="page-header section bg-light text-center">
 
@@ -304,20 +230,11 @@
 
         </section>
 
-
-
-        <!-- ======================================================
-             GALERÍA
-             ====================================================== -->
-
         <section class="section">
 
             <div class="container">
 
                 <div class="gallery-grid">
-
-
-                    <!-- 1 -->
 
                     <article class="gallery-card">
 
@@ -346,10 +263,6 @@
 
                     </article>
 
-
-
-                    <!-- 2 -->
-
                     <article class="gallery-card">
 
                         <div class="gallery-card-image">
@@ -376,10 +289,6 @@
                         </div>
 
                     </article>
-
-
-
-                    <!-- 3 -->
 
                     <article class="gallery-card">
 
@@ -408,10 +317,6 @@
 
                     </article>
 
-
-
-                    <!-- 4 -->
-
                     <article class="gallery-card">
 
                         <div class="gallery-card-image">
@@ -437,10 +342,6 @@
                         </div>
 
                     </article>
-
-
-
-                    <!-- 5 -->
 
                     <article class="gallery-card">
 
@@ -469,10 +370,6 @@
 
                     </article>
 
-
-
-                    <!-- 6 -->
-
                     <article class="gallery-card">
 
                         <div class="gallery-card-image">
@@ -499,10 +396,6 @@
                         </div>
 
                     </article>
-
-
-
-                    <!-- 7 -->
 
                     <article class="gallery-card">
 
@@ -531,10 +424,6 @@
 
                     </article>
 
-
-
-                    <!-- 8 -->
-
                     <article class="gallery-card">
 
                         <div class="gallery-card-image">
@@ -562,10 +451,6 @@
 
                     </article>
 
-
-
-                    <!-- 9 -->
-
                     <article class="gallery-card">
 
                         <div class="gallery-card-image">
@@ -591,10 +476,6 @@
                         </div>
 
                     </article>
-
-
-
-                    <!-- 10 -->
 
                     <article class="gallery-card">
 
@@ -623,10 +504,6 @@
 
                     </article>
 
-
-
-                    <!-- 11 -->
-
                     <article class="gallery-card">
 
                         <div class="gallery-card-image">
@@ -652,10 +529,6 @@
                         </div>
 
                     </article>
-
-
-
-                    <!-- 12 -->
 
                     <article class="gallery-card">
 
@@ -683,10 +556,6 @@
 
                     </article>
 
-
-
-                    <!-- 13 -->
-
                     <article class="gallery-card">
 
                         <div class="gallery-card-image">
@@ -712,10 +581,6 @@
                         </div>
 
                     </article>
-
-
-
-                    <!-- 14 -->
 
                     <article class="gallery-card">
 
@@ -744,10 +609,6 @@
 
                     </article>
 
-
-
-                    <!-- 15 -->
-
                     <article class="gallery-card">
 
                         <div class="gallery-card-image">
@@ -774,10 +635,6 @@
                         </div>
 
                     </article>
-
-
-
-                    <!-- 16 -->
 
                     <article class="gallery-card">
 
@@ -806,10 +663,6 @@
 
                     </article>
 
-
-
-                    <!-- 17 -->
-
                     <article class="gallery-card">
 
                         <div class="gallery-card-image">
@@ -836,10 +689,6 @@
                         </div>
 
                     </article>
-
-
-
-                    <!-- 18 -->
 
                     <article class="gallery-card">
 
@@ -868,7 +717,6 @@
 
                     </article>
 
-
                 </div>
 
             </div>
@@ -877,16 +725,9 @@
 
     </main>
 
-
-
-    <!-- ==========================================================
-         FOOTER
-         ========================================================== -->
-
     <footer class="site-footer">
 
         <div class="container footer-grid">
-
 
             <div class="footer-brand">
 
@@ -900,8 +741,6 @@
                 </p>
 
             </div>
-
-
 
             <div class="footer-links">
 
@@ -945,8 +784,6 @@
 
             </div>
 
-
-
             <div class="footer-contact">
 
                 <h4>
@@ -962,8 +799,6 @@
 
         </div>
 
-
-
         <div class="footer-bottom container">
 
             <p>
@@ -974,10 +809,6 @@
         </div>
 
     </footer>
-
-
-
-    <!-- JavaScript -->
 
     <script src="js/main.js"></script>
 

@@ -1,22 +1,11 @@
-/**
- * TRANCAS VIEJAS - Archivo JavaScript Principal
- * Contiene la lógica del menú móvil accesible y el visor
- * de imágenes (lightbox) de la galería.
- */
-
 document.addEventListener('DOMContentLoaded', () => {
 
-    // ==========================================
-    // 1. NAVEGACIÓN Y MENÚ MÓVIL ACCESIBLE
-    // ==========================================
     const menuToggle = document.querySelector('.menu-toggle');
     const siteNav = document.querySelector('.site-nav');
     const navLinks = document.querySelectorAll('.nav-list a');
 
     if (menuToggle && siteNav) {
-        /**
-         * Alterna el estado del menú móvil y actualiza los atributos ARIA para lectores de pantalla.
-         */
+
         const toggleMenu = () => {
             const isOpen = siteNav.classList.contains('is-open');
 
@@ -31,10 +20,8 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        // Evento de clic en el botón de hamburguesa
         menuToggle.addEventListener('click', toggleMenu);
 
-        // Cierre del menú al seleccionar cualquier enlace de la lista
         navLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (siteNav.classList.contains('is-open')) {
@@ -44,9 +31,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
-    // 2. LIGHTBOX (VISOR DE IMÁGENES)
-    // ==========================================
     const galleryImages = Array.from(
         document.querySelectorAll(
             '.gallery-card-image img, .card-image-wrapper img'
@@ -55,7 +39,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (galleryImages.length > 0) {
 
-        // Creamos el visor una sola vez y lo añadimos al final del <body>.
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox';
         lightbox.setAttribute('role', 'dialog');
@@ -130,7 +113,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         };
 
-        // Hacemos cada foto de la galería "ampliable" (ratón y teclado).
         galleryImages.forEach((img, index) => {
             img.classList.add('is-zoomable');
             img.setAttribute('tabindex', '0');
@@ -150,14 +132,12 @@ document.addEventListener('DOMContentLoaded', () => {
         prevBtn.addEventListener('click', () => show(currentIndex - 1));
         nextBtn.addEventListener('click', () => show(currentIndex + 1));
 
-        // Clic en el fondo (fuera de la foto) para cerrar.
         lightbox.addEventListener('click', (e) => {
             if (e.target === lightbox || e.target.classList.contains('lightbox-figure')) {
                 close();
             }
         });
 
-        // Teclado: Escape cierra, flechas navegan.
         document.addEventListener('keydown', (e) => {
             if (lightbox.hidden) return;
 
@@ -171,9 +151,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ==========================================
-    // 3. REVELADO SUAVE AL HACER SCROLL
-    // ==========================================
     const prefersReducedMotion =
         window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -192,7 +169,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
         revealTargets.forEach((el) => el.classList.add('reveal'));
 
-        // Pequeno retraso escalonado entre elementos hermanos.
         const groups = new Map();
         revealTargets.forEach((el) => {
             const parent = el.parentElement;
@@ -224,14 +200,8 @@ document.addEventListener('DOMContentLoaded', () => {
         revealTargets.forEach((el) => revealObserver.observe(el));
     }
 
-    // ==========================================
-    // 4. ENCABEZADO CON SOMBRA AL HACER SCROLL
-    // ==========================================
     const siteHeader = document.querySelector('.site-header');
 
-    // ==========================================
-    // 5. BOTON "VOLVER ARRIBA"
-    // ==========================================
     const backToTop = document.createElement('button');
     backToTop.className = 'back-to-top';
     backToTop.type = 'button';

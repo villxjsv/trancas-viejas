@@ -1,12 +1,3 @@
-/* ==========================================================================
-   TRANCAS VIEJAS — CSS PRINCIPAL
-   Responsive + animaciones
-   ========================================================================== */
-
-/* ==========================================================================
-   1. VARIABLES
-   ========================================================================== */
-
 :root {
     --color-primary: #2C5F2D;
     --color-primary-dark: #214722;
@@ -36,11 +27,6 @@
 
     --transition: 0.3s ease;
 }
-
-
-/* ==========================================================================
-   2. RESET
-   ========================================================================== */
 
 *,
 *::before,
@@ -100,11 +86,6 @@ button {
     outline-offset: 4px;
 }
 
-
-/* ==========================================================================
-   3. TIPOGRAFÍA
-   ========================================================================== */
-
 h1,
 h2,
 h3,
@@ -144,11 +125,6 @@ p {
 .text-muted {
     color: var(--color-text-muted);
 }
-
-
-/* ==========================================================================
-   4. CONTENEDORES
-   ========================================================================== */
 
 .container {
     width: min(92%, var(--container-width));
@@ -207,11 +183,6 @@ p {
     text-align: center;
 }
 
-
-/* ==========================================================================
-   5. GRIDS
-   ========================================================================== */
-
 .grid,
 .grid-3,
 .grid-4,
@@ -228,11 +199,6 @@ p {
     gap: 2rem;
     align-items: center;
 }
-
-
-/* ==========================================================================
-   6. BOTONES
-   ========================================================================== */
 
 .btn {
     display: inline-flex;
@@ -291,11 +257,6 @@ p {
         color var(--transition),
         transform var(--transition);
 }
-
-
-/* ==========================================================================
-   7. HEADER Y NAVEGACIÓN
-   ========================================================================== */
 
 .site-header {
     position: sticky;
@@ -454,11 +415,6 @@ p {
     color: var(--color-primary);
 }
 
-
-/* ==========================================================================
-   8. PORTADA PRINCIPAL
-   ========================================================================== */
-
 .hero-section {
     position: relative;
 
@@ -478,7 +434,6 @@ p {
             rgba(0, 0, 0, 0.10) 100%),
         url("../img/portada/hero-principal.jpg");
 
-    /* Version WebP con respaldo automatico a JPEG en navegadores antiguos. */
     background-image:
         linear-gradient(90deg,
             rgba(0, 0, 0, 0.58) 0%,
@@ -593,11 +548,6 @@ p {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
 }
 
-
-/* ==========================================================================
-   9. NUESTRA COMUNIDAD
-   ========================================================================== */
-
 .intro-text,
 .intro-image {
     min-width: 0;
@@ -630,11 +580,6 @@ p {
         transform 0.4s ease,
         box-shadow 0.4s ease;
 }
-
-
-/* ==========================================================================
-   10. TARJETAS
-   ========================================================================== */
 
 .card {
     display: flex;
@@ -718,17 +663,6 @@ p {
     font-weight: 600;
 }
 
-
-/* ==========================================================================
-   11. GALERÍA
-   ========================================================================== */
-
-/*
-   IMPORTANTE:
-   Solo existe UNA configuración principal para .gallery-grid.
-   Esto evita que las reglas anteriores se pisen entre sí.
-*/
-
 .gallery-grid {
     display: grid;
 
@@ -785,10 +719,6 @@ p {
     width: 100%;
     height: 100%;
 
-    /*
-       contain evita que fotos verticales se recorten.
-       Así se conservan completas.
-    */
     object-fit: contain;
     object-position: center;
 
@@ -819,19 +749,6 @@ p {
 
     font-size: 0.94rem;
 }
-
-
-/*
-   Clases usadas por galeria.html y eventos.html.
-
-   IMPORTANTE: eventos.html utiliza .gallery-card-image y
-   .gallery-card-body. Antes no tenían estilos propios, por lo
-   que las imágenes se mostraban a tamaño natural y las tarjetas
-   quedaban con alturas distintas (sobre todo en el teléfono).
-   Con estas reglas todas las tarjetas de la galería mantienen
-   el mismo alto y las fotos usan object-fit: cover para llenar
-   el marco (recortando un poco los bordes), igual que en Lugares.
-*/
 
 .gallery-card-image {
     display: flex;
@@ -865,26 +782,13 @@ p {
     padding: 1.2rem;
 }
 
-/*
-   Encuadre para fotos verticales cuyo sujeto está en la parte
-   de arriba y se cortaba con el recorte centrado.
-*/
 .gallery-card-image img.img-up {
     object-position: center 25%;
 }
 
-
-/*
-   Si una sección tiene una sola tarjeta,
-   no la estiramos a toda la pantalla.
-*/
-
 #fauna .gallery-grid {
     grid-template-columns: minmax(0, 1fr);
 }
-
-
-/* Galería antigua, por compatibilidad */
 
 .gallery-item {
     overflow: hidden;
@@ -907,12 +811,6 @@ p {
     transition: transform 0.4s ease;
 }
 
-
-/*
-   Lugares: se iguala la transición de las tarjetas a la de Galería
-   para que la animación al pasar el cursor sea exactamente la misma.
-*/
-
 #lugares-destacados .card {
     transition:
         transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
@@ -923,16 +821,6 @@ p {
 #lugares-destacados .card-image-wrapper img {
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
-
-
-/* ==========================================================================
-   12. ANIMACIONES HOVER
-   ========================================================================== */
-
-/*
-   NO se eliminan las animaciones.
-   Solo se activan cuando realmente existe mouse/hover.
-*/
 
 @media (hover: hover) and (pointer: fine) {
 
@@ -961,10 +849,6 @@ p {
         transform: scale(1.05);
     }
 
-    /*
-       Lugares: misma animación que la sección de Galería
-       (las tarjetas usan .card / .card-image-wrapper).
-    */
     #lugares-destacados .card:hover,
     #lugares-destacados .card:focus-within {
         transform: translateY(-6px);
@@ -1047,11 +931,6 @@ p {
     }
 }
 
-
-/* ==========================================================================
-   13. CITA
-   ========================================================================== */
-
 .community-quote {
     border-top: 1px solid var(--color-border);
     border-bottom: 1px solid var(--color-border);
@@ -1083,11 +962,6 @@ p {
     letter-spacing: 0.5px;
 }
 
-
-/* ==========================================================================
-   14. ENCABEZADOS DE PÁGINA
-   ========================================================================== */
-
 .page-header {
     padding-block: clamp(2.5rem, 5vw, 3.5rem);
 
@@ -1107,11 +981,6 @@ p {
 
     font-size: 1rem;
 }
-
-
-/* ==========================================================================
-   15. HISTORIA
-   ========================================================================== */
 
 .history-split {
     display: flex;
@@ -1214,11 +1083,6 @@ p {
     font-size: 0.825rem;
 }
 
-
-/* ==========================================================================
-   16. LÍNEA DEL TIEMPO
-   ========================================================================== */
-
 .timeline {
     position: relative;
 
@@ -1282,11 +1146,6 @@ p {
 
     box-shadow: var(--shadow-subtle);
 }
-
-
-/* ==========================================================================
-   17. UBICACIÓN Y MAPAS
-   ========================================================================== */
 
 .location-grid {
     align-items: stretch;
@@ -1448,11 +1307,6 @@ p {
     filter: contrast(102%) saturate(88%);
 }
 
-
-/* ==========================================================================
-   18. FOOTER
-   ========================================================================== */
-
 .site-footer {
     padding: 3rem 0 1.5rem;
 
@@ -1512,11 +1366,6 @@ p {
     margin-bottom: 0;
 }
 
-
-/* ==========================================================================
-   19. UTILIDADES
-   ========================================================================== */
-
 .mt-large {
     margin-top: 4rem;
 }
@@ -1532,11 +1381,6 @@ p {
 .card-padded {
     padding: 2rem;
 }
-
-
-/* ==========================================================================
-   20. TABLET — 600px+
-   ========================================================================== */
 
 @media (min-width: 600px) {
 
@@ -1620,11 +1464,6 @@ p {
         left: 0;
     }
 }
-
-
-/* ==========================================================================
-   21. ESCRITORIO — 1024px+
-   ========================================================================== */
 
 @media (min-width: 1024px) {
 
@@ -1726,11 +1565,6 @@ p {
     }
 }
 
-
-/* ==========================================================================
-   22. CELULARES — 480px o menos
-   ========================================================================== */
-
 @media (max-width: 480px) {
 
     .container {
@@ -1757,7 +1591,6 @@ p {
                 rgba(0, 0, 0, 0.52) 100%),
             url("../img/portada/hero-principal.jpg");
 
-        /* Version WebP con respaldo automatico a JPEG. */
         background-image:
             linear-gradient(180deg,
                 rgba(0, 0, 0, 0.38) 0%,
@@ -1885,11 +1718,6 @@ p {
     }
 }
 
-
-/* ==========================================================================
-   23. CELULARES MUY PEQUEÑOS — 360px o menos
-   ========================================================================== */
-
 @media (max-width: 360px) {
 
     .hero-title {
@@ -1931,11 +1759,6 @@ p {
     }
 }
 
-
-/* ==========================================================================
-   24. ACCESIBILIDAD
-   ========================================================================== */
-
 @media (prefers-reduced-motion: reduce) {
 
     html {
@@ -1950,11 +1773,6 @@ p {
         transition-duration: 0.01ms !important;
     }
 }
-
-
-/* ==========================================================================
-   25. LIGHTBOX (VISOR DE IMÁGENES DE LA GALERÍA)
-   ========================================================================== */
 
 .lightbox {
     position: fixed;
@@ -2069,7 +1887,6 @@ p {
     transform: scale(1.08);
 }
 
-/* Cursor de "ampliar" en las miniaturas con lightbox. */
 .gallery-card-image img.is-zoomable,
 .card-image-wrapper img.is-zoomable {
     cursor: zoom-in;
@@ -2106,15 +1923,6 @@ p {
     }
 }
 
-
-/* ==========================================================================
-   MEJORAS DE ACABADO
-   1. Revelado suave al hacer scroll
-   2. Boton "volver arriba"
-   6. Sombra del encabezado al hacer scroll
-   ========================================================================== */
-
-/* 1. Revelado suave al hacer scroll */
 .reveal {
     opacity: 0;
     transform: translateY(22px);
@@ -2131,7 +1939,6 @@ p {
     transform: none;
 }
 
-/* 6. Sombra del encabezado al hacer scroll */
 .site-header {
     transition:
         box-shadow 0.3s ease,
@@ -2142,7 +1949,6 @@ p {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
 }
 
-/* 2. Boton "volver arriba" */
 .back-to-top {
     position: fixed;
     right: 1.25rem;

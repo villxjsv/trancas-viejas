@@ -45,11 +45,11 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ==========================================
-    // 2. LIGHTBOX (VISOR DE IMÁGENES DE LA GALERÍA)
+    // 2. LIGHTBOX (VISOR DE IMÁGENES)
     // ==========================================
     const galleryImages = Array.from(
         document.querySelectorAll(
-            '.gallery-card-image img, #lugares-destacados .card-image-wrapper img'
+            '.gallery-card-image img, .card-image-wrapper img'
         )
     );
 

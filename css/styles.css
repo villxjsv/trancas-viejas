@@ -2041,7 +2041,7 @@ p {
 
 /* Cursor de "ampliar" en las miniaturas con lightbox. */
 .gallery-card-image img.is-zoomable,
-#lugares-destacados .card-image-wrapper img.is-zoomable {
+.card-image-wrapper img.is-zoomable {
     cursor: zoom-in;
 }
 

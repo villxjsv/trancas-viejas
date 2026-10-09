@@ -2039,8 +2039,9 @@ p {
     transform: scale(1.08);
 }
 
-/* Cursor de "ampliar" en las miniaturas de la galería. */
-.gallery-card-image img.is-zoomable {
+/* Cursor de "ampliar" en las miniaturas con lightbox. */
+.gallery-card-image img.is-zoomable,
+#lugares-destacados .card-image-wrapper img.is-zoomable {
     cursor: zoom-in;
 }
 

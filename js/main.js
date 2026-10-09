@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. LIGHTBOX (VISOR DE IMÁGENES DE LA GALERÍA)
     // ==========================================
     const galleryImages = Array.from(
-        document.querySelectorAll('.gallery-card-image img')
+        document.querySelectorAll(
+            '.gallery-card-image img, #lugares-destacados .card-image-wrapper img'
+        )
     );
 
     if (galleryImages.length > 0) {
@@ -58,7 +60,7 @@ document.addEventListener('DOMContentLoaded', () => {
         lightbox.className = 'lightbox';
         lightbox.setAttribute('role', 'dialog');
         lightbox.setAttribute('aria-modal', 'true');
-        lightbox.setAttribute('aria-label', 'Visor de imágenes de la galería');
+        lightbox.setAttribute('aria-label', 'Visor de imágenes');
         lightbox.hidden = true;
 
         lightbox.innerHTML = `

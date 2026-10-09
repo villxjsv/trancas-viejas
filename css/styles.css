@@ -1,19 +1,19 @@
 :root {
-    --color-primary: #2C5F2D;
+    --color-primary: #2c5f2d;
     --color-primary-dark: #214722;
-    --color-secondary: #975C41;
-    --color-accent: #E5A93B;
+    --color-secondary: #975c41;
+    --color-accent: #e5a93b;
 
-    --color-background: #FDFBF7;
-    --color-surface: #FFFFFF;
-    --color-bg-light: #F4F1EA;
+    --color-background: #fdfbf7;
+    --color-surface: #ffffff;
+    --color-bg-light: #f4f1ea;
 
-    --color-text: #2B2B2B;
-    --color-text-muted: #6E6E6E;
-    --color-text-light: #FFFFFF;
+    --color-text: #2b2b2b;
+    --color-text-muted: #6e6e6e;
+    --color-text-light: #ffffff;
 
-    --color-border: #E2E8F0;
-    --color-border-warm: #E5E0D8;
+    --color-border: #e2e8f0;
+    --color-border-warm: #e5e0d8;
 
     --font-heading: 'Playfair Display', Georgia, serif;
     --font-body: 'Inter', Arial, sans-serif;
@@ -23,7 +23,7 @@
 
     --shadow-subtle: 0 4px 20px rgba(0, 0, 0, 0.05);
     --shadow-card: 0 6px 20px rgba(0, 0, 0, 0.06);
-    --shadow-hover: 0 14px 30px rgba(0, 0, 0, 0.10);
+    --shadow-hover: 0 14px 30px rgba(0, 0, 0, 0.1);
 
     --transition: 0.3s ease;
 }
@@ -303,7 +303,7 @@ p {
     width: 44px;
     height: 44px;
 
-    border: 1px solid #CBD5E1;
+    border: 1px solid #cbd5e1;
     border-radius: 7px;
 
     background: transparent;
@@ -331,7 +331,7 @@ p {
     width: 100%;
     height: 2px;
 
-    content: "";
+    content: '';
 
     background: currentColor;
 
@@ -361,7 +361,7 @@ p {
 
     background: var(--color-surface);
 
-    border-top: 1px solid #EEF2F5;
+    border-top: 1px solid #eef2f5;
 
     box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
 
@@ -427,21 +427,24 @@ p {
 
     overflow: hidden;
 
-    background-image:
-        linear-gradient(90deg,
+    background-image: linear-gradient(
+            90deg,
             rgba(0, 0, 0, 0.58) 0%,
-            rgba(0, 0, 0, 0.30) 52%,
-            rgba(0, 0, 0, 0.10) 100%),
-        url("../img/portada/hero-principal.jpg");
+            rgba(0, 0, 0, 0.3) 52%,
+            rgba(0, 0, 0, 0.1) 100%
+        ),
+        url('../img/portada/hero-principal.jpg');
 
-    background-image:
-        linear-gradient(90deg,
+    background-image: linear-gradient(
+            90deg,
             rgba(0, 0, 0, 0.58) 0%,
-            rgba(0, 0, 0, 0.30) 52%,
-            rgba(0, 0, 0, 0.10) 100%),
+            rgba(0, 0, 0, 0.3) 52%,
+            rgba(0, 0, 0, 0.1) 100%
+        ),
         image-set(
-            url("../img/portada/hero-principal.webp") type("image/webp"),
-            url("../img/portada/hero-principal.jpg") type("image/jpeg"));
+            url('../img/portada/hero-principal.webp') type('image/webp'),
+            url('../img/portada/hero-principal.jpg') type('image/jpeg')
+        );
 
     background-position: center;
     background-size: cover;
@@ -457,7 +460,7 @@ p {
     width: 100%;
     max-width: 760px;
 
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .hero-kicker {
@@ -479,7 +482,7 @@ p {
 .hero-title {
     margin-bottom: 0.8rem;
 
-    color: #FFFFFF;
+    color: #ffffff;
 
     font-size: clamp(2.5rem, 8vw, 4.7rem);
     line-height: 1.05;
@@ -492,7 +495,7 @@ p {
 
     margin-bottom: 1.75rem;
 
-    color: #FFFFFF;
+    color: #ffffff;
 
     font-size: clamp(1rem, 2.2vw, 1.25rem);
 
@@ -530,7 +533,7 @@ p {
 }
 
 .btn-hero-primary {
-    color: #3A2B00;
+    color: #3a2b00;
 
     background: var(--color-accent);
     border-color: var(--color-accent);
@@ -541,9 +544,9 @@ p {
 .btn-hero-secondary {
     color: var(--color-primary);
 
-    background: #FFFFFF;
+    background: #ffffff;
 
-    border-color: #FFFFFF;
+    border-color: #ffffff;
 
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.22);
 }
@@ -684,7 +687,7 @@ p {
 
     overflow: hidden;
 
-    background: #FFFFFF;
+    background: #ffffff;
 
     border: 1px solid var(--color-border);
 
@@ -722,8 +725,7 @@ p {
     object-fit: contain;
     object-position: center;
 
-    transition:
-        transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .gallery-card .card-content {
@@ -823,7 +825,6 @@ p {
 }
 
 @media (hover: hover) and (pointer: fine) {
-
     .card:hover,
     .card:focus-within {
         transform: translateY(-5px);
@@ -892,7 +893,7 @@ p {
     .btn-secondary:hover {
         color: var(--color-text);
 
-        background: #FFFFFF;
+        background: #ffffff;
     }
 
     .btn-outline:hover {
@@ -903,9 +904,9 @@ p {
     }
 
     .btn-hero-primary:hover {
-        background: #D69A2E;
+        background: #d69a2e;
 
-        border-color: #D69A2E;
+        border-color: #d69a2e;
 
         transform: translateY(-2px);
 
@@ -913,9 +914,9 @@ p {
     }
 
     .btn-hero-secondary:hover {
-        background: #F4F1EA;
+        background: #f4f1ea;
 
-        border-color: #F4F1EA;
+        border-color: #f4f1ea;
 
         transform: translateY(-2px);
     }
@@ -1008,7 +1009,7 @@ p {
 
     padding: 1rem;
 
-    background: #FFFFFF;
+    background: #ffffff;
 
     border: 1px solid var(--color-border);
 
@@ -1052,7 +1053,7 @@ p {
 
     margin-inline: auto;
 
-    background: #FFFFFF;
+    background: #ffffff;
 
     border: 1px solid var(--color-border);
 
@@ -1072,7 +1073,7 @@ p {
 .history-portrait-caption {
     padding: 0.85rem 1rem;
 
-    background: #F8FAFC;
+    background: #f8fafc;
 
     border-top: 1px solid var(--color-border);
 
@@ -1102,7 +1103,7 @@ p {
 
     width: 3px;
 
-    content: "";
+    content: '';
 
     background: var(--color-secondary);
 
@@ -1242,7 +1243,7 @@ p {
 
     overflow: hidden;
 
-    background: #EAE7DF;
+    background: #eae7df;
 
     border: 1px solid var(--color-border);
 
@@ -1289,7 +1290,7 @@ p {
 .map-frame-pro {
     min-height: 320px;
 
-    background: #1A1A1A;
+    background: #1a1a1a;
 }
 
 .map-embed-container {
@@ -1310,9 +1311,9 @@ p {
 .site-footer {
     padding: 3rem 0 1.5rem;
 
-    color: #F8FAFC;
+    color: #f8fafc;
 
-    background: #1A1A1A;
+    background: #1a1a1a;
 }
 
 .footer-grid {
@@ -1325,12 +1326,12 @@ p {
 .footer-brand h2,
 .footer-links h4,
 .footer-contact h4 {
-    color: #FFFFFF;
+    color: #ffffff;
 }
 
 .footer-brand p,
 .footer-contact p {
-    color: #CBD5E1;
+    color: #cbd5e1;
 }
 
 .footer-links ul {
@@ -1345,7 +1346,7 @@ p {
 }
 
 .footer-links a {
-    color: #CBD5E1;
+    color: #cbd5e1;
 
     transition: color var(--transition);
 }
@@ -1355,7 +1356,7 @@ p {
 
     border-top: 1px solid #333333;
 
-    color: #94A3B8;
+    color: #94a3b8;
 
     font-size: 0.85rem;
 
@@ -1383,7 +1384,6 @@ p {
 }
 
 @media (min-width: 600px) {
-
     .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1414,15 +1414,13 @@ p {
     .history-split {
         display: grid;
 
-        grid-template-columns:
-            minmax(0, 1.2fr) minmax(0, 0.8fr);
+        grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.8fr);
 
         align-items: center;
     }
 
     .location-grid {
-        grid-template-columns:
-            minmax(0, 0.9fr) minmax(0, 1.1fr);
+        grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
 
         gap: 2rem;
     }
@@ -1466,7 +1464,6 @@ p {
 }
 
 @media (min-width: 1024px) {
-
     .header-container {
         min-height: 76px;
     }
@@ -1521,8 +1518,7 @@ p {
     }
 
     .intro-grid {
-        grid-template-columns:
-            minmax(0, 1fr) minmax(0, 1fr);
+        grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
 
         gap: 4rem;
     }
@@ -1544,8 +1540,7 @@ p {
     }
 
     .footer-grid {
-        grid-template-columns:
-            1.5fr 1fr 1.3fr;
+        grid-template-columns: 1.5fr 1fr 1.3fr;
     }
 
     .hero-section {
@@ -1553,8 +1548,7 @@ p {
     }
 
     .location-grid {
-        grid-template-columns:
-            minmax(0, 0.85fr) minmax(0, 1.15fr);
+        grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
 
         gap: 3rem;
     }
@@ -1566,7 +1560,6 @@ p {
 }
 
 @media (max-width: 480px) {
-
     .container {
         width: 92%;
     }
@@ -1584,21 +1577,24 @@ p {
 
         padding-block: 4rem;
 
-        background-image:
-            linear-gradient(180deg,
+        background-image: linear-gradient(
+                180deg,
                 rgba(0, 0, 0, 0.38) 0%,
-                rgba(0, 0, 0, 0.20) 45%,
-                rgba(0, 0, 0, 0.52) 100%),
-            url("../img/portada/hero-principal.jpg");
+                rgba(0, 0, 0, 0.2) 45%,
+                rgba(0, 0, 0, 0.52) 100%
+            ),
+            url('../img/portada/hero-principal.jpg');
 
-        background-image:
-            linear-gradient(180deg,
+        background-image: linear-gradient(
+                180deg,
                 rgba(0, 0, 0, 0.38) 0%,
-                rgba(0, 0, 0, 0.20) 45%,
-                rgba(0, 0, 0, 0.52) 100%),
+                rgba(0, 0, 0, 0.2) 45%,
+                rgba(0, 0, 0, 0.52) 100%
+            ),
             image-set(
-                url("../img/portada/hero-principal.webp") type("image/webp"),
-                url("../img/portada/hero-principal.jpg") type("image/jpeg"));
+                url('../img/portada/hero-principal.webp') type('image/webp'),
+                url('../img/portada/hero-principal.jpg') type('image/jpeg')
+            );
 
         background-position: 58% center;
     }
@@ -1719,7 +1715,6 @@ p {
 }
 
 @media (max-width: 360px) {
-
     .hero-title {
         font-size: 2.2rem;
     }
@@ -1760,7 +1755,6 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
     html {
         scroll-behavior: auto;
     }
@@ -1849,7 +1843,7 @@ p {
     flex: none;
 
     background: rgba(255, 255, 255, 0.14);
-    color: #FFFFFF;
+    color: #ffffff;
 
     border: 0;
     border-radius: 50%;
@@ -1893,7 +1887,6 @@ p {
 }
 
 @media (max-width: 600px) {
-
     .lightbox {
         flex-direction: column;
         gap: 0.75rem;
@@ -1946,7 +1939,7 @@ p {
 }
 
 .site-header.is-scrolled {
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .back-to-top {
@@ -1965,7 +1958,7 @@ p {
     border: none;
     border-radius: 50%;
 
-    color: #FFFFFF;
+    color: #ffffff;
     background: var(--color-primary);
 
     box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
@@ -2001,7 +1994,6 @@ p {
 }
 
 @media (max-width: 480px) {
-
     .back-to-top {
         right: 0.9rem;
         bottom: 0.9rem;
@@ -2012,7 +2004,6 @@ p {
 }
 
 @media (prefers-reduced-motion: reduce) {
-
     .reveal {
         opacity: 1 !important;
         transform: none !important;

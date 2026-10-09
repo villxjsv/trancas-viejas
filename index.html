@@ -1,538 +1,407 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Trancas Viejas | Inicio y Comunidad</title>
 
-    <title>Trancas Viejas | Inicio y Comunidad</title>
+        <meta
+            name="description"
+            content="Portal comunitario y documental de Trancas Viejas, municipio de Moloacán, Veracruz."
+        />
 
-    <meta name="description"
-        content="Portal comunitario y documental de Trancas Viejas, municipio de Moloacán, Veracruz.">
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Trancas Viejas" />
+        <meta property="og:locale" content="es_MX" />
+        <meta property="og:title" content="Trancas Viejas | Inicio y Comunidad" />
+        <meta
+            property="og:description"
+            content="Portal comunitario y documental de Trancas Viejas, municipio de Moloacán, Veracruz."
+        />
+        <meta property="og:url" content="https://villxjsv.github.io/trancas-viejas/" />
+        <meta
+            property="og:image"
+            content="https://villxjsv.github.io/trancas-viejas/img/portada/hero-principal.jpg"
+        />
+        <meta property="og:image:width" content="1600" />
+        <meta property="og:image:height" content="900" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Trancas Viejas | Inicio y Comunidad" />
+        <meta
+            name="twitter:description"
+            content="Portal comunitario y documental de Trancas Viejas, municipio de Moloacán, Veracruz."
+        />
+        <meta
+            name="twitter:image"
+            content="https://villxjsv.github.io/trancas-viejas/img/portada/hero-principal.jpg"
+        />
 
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Trancas Viejas">
-    <meta property="og:locale" content="es_MX">
-    <meta property="og:title" content="Trancas Viejas | Inicio y Comunidad">
-    <meta property="og:description"
-        content="Portal comunitario y documental de Trancas Viejas, municipio de Moloacán, Veracruz.">
-    <meta property="og:url" content="https://villxjsv.github.io/trancas-viejas/">
-    <meta property="og:image" content="https://villxjsv.github.io/trancas-viejas/img/portada/hero-principal.jpg">
-    <meta property="og:image:width" content="1600">
-    <meta property="og:image:height" content="900">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Trancas Viejas | Inicio y Comunidad">
-    <meta name="twitter:description"
-        content="Portal comunitario y documental de Trancas Viejas, municipio de Moloacán, Veracruz.">
-    <meta name="twitter:image" content="https://villxjsv.github.io/trancas-viejas/img/portada/hero-principal.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+            rel="stylesheet"
+        />
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
-        rel="stylesheet">
+        <link rel="icon" href="favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
 
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <body>
+        <header class="site-header">
+            <div class="container header-container">
+                <a href="index.html" class="logo"> Trancas Viejas </a>
 
-<body>
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-controls="primary-menu"
+                    aria-expanded="false"
+                    aria-label="Mostrar menú"
+                >
+                    <span class="hamburger"></span>
+                </button>
 
-    <header class="site-header">
+                <nav class="site-nav" id="primary-menu" aria-label="Navegación principal">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="index.html" class="active"> Inicio </a>
+                        </li>
 
-        <div class="container header-container">
+                        <li>
+                            <a href="historia.html"> Historia </a>
+                        </li>
 
-            <a href="index.html" class="logo">
-                Trancas Viejas
-            </a>
+                        <li>
+                            <a href="galeria.html"> Galería </a>
+                        </li>
 
-            <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false"
-                aria-label="Mostrar menú">
-                <span class="hamburger"></span>
-            </button>
+                        <li>
+                            <a href="lugares.html"> Lugares </a>
+                        </li>
 
-            <nav class="site-nav" id="primary-menu" aria-label="Navegación principal">
-
-                <ul class="nav-list">
-
-                    <li>
-                        <a href="index.html" class="active">
-                            Inicio
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="historia.html">
-                            Historia
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="galeria.html">
-                            Galería
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="lugares.html">
-                            Lugares
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="eventos.html">
-                            Eventos
-                        </a>
-                    </li>
-
-                </ul>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-    <main>
-
-        <section class="hero-section">
-
-            <div class="container hero-container">
-
-                <div class="hero-content">
-
-                    <span class="hero-kicker">
-                        COMUNIDAD DE MOLOACÁN, VERACRUZ
-                    </span>
-
-                    <h1 class="hero-title">
-                        Trancas Viejas
-                    </h1>
-
-                    <p class="hero-subtitle">
-                        Historia, comunidad y tradiciones
-                    </p>
-
-                    <div class="hero-actions">
-
-                        <a href="historia.html" class="btn-hero-primary">
-                            Conoce la comunidad
-                        </a>
-
-                        <a href="galeria.html" class="btn-hero-secondary">
-                            Explora la galería
-                        </a>
-
-                    </div>
-
-                </div>
-
+                        <li>
+                            <a href="eventos.html"> Eventos </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
+        </header>
 
-        </section>
+        <main>
+            <section class="hero-section">
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <span class="hero-kicker"> COMUNIDAD DE MOLOACÁN, VERACRUZ </span>
 
-        <section id="conoce" class="section">
+                        <h1 class="hero-title">Trancas Viejas</h1>
 
-            <div class="container">
+                        <p class="hero-subtitle">Historia, comunidad y tradiciones</p>
 
-                <div class="intro-grid">
+                        <div class="hero-actions">
+                            <a href="historia.html" class="btn-hero-primary">
+                                Conoce la comunidad
+                            </a>
 
-                    <div class="intro-text">
+                            <a href="galeria.html" class="btn-hero-secondary">
+                                Explora la galería
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                        <h2>
-                            Nuestra Comunidad
-                        </h2>
+            <section id="conoce" class="section">
+                <div class="container">
+                    <div class="intro-grid">
+                        <div class="intro-text">
+                            <h2>Nuestra Comunidad</h2>
+
+                            <p>
+                                Trancas Viejas es nuestra comunidad en Moloacán, Veracruz. Somos un
+                                pueblo tranquilo de gente trabajadora dedicada al campo, la milpa y
+                                la ganadería.
+                            </p>
+
+                            <p>
+                                Aquí nos conocemos entre vecinos, nos apoyamos en las faenas y
+                                cuidamos nuestras costumbres.
+                            </p>
+                        </div>
+
+                        <div class="intro-image">
+                            <picture>
+                                <source
+                                    srcset="img/lugares/calle-principal-atardecer.webp"
+                                    type="image/webp"
+                                />
+                                <img
+                                    src="img/lugares/calle-principal-atardecer.jpg"
+                                    alt="Comunidad de Trancas Viejas"
+                                    loading="lazy"
+                                />
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section" id="descubre">
+                <div class="container">
+                    <div class="section-header text-center">
+                        <h2>Descubre Trancas Viejas</h2>
 
                         <p>
-                            Trancas Viejas es nuestra comunidad en
-                            Moloacán, Veracruz. Somos un pueblo tranquilo
-                            de gente trabajadora dedicada al campo,
-                            la milpa y la ganadería.
+                            Conoce algunos de los lugares, paisajes y tradiciones que forman parte
+                            de la comunidad.
                         </p>
-
-                        <p>
-                            Aquí nos conocemos entre vecinos,
-                            nos apoyamos en las faenas y cuidamos
-                            nuestras costumbres.
-                        </p>
-
                     </div>
 
-                    <div class="intro-image">
+                    <div class="grid grid-4">
+                        <article class="card feature-card">
+                            <div class="card-image-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="img/lugares/vias-ferrocarril.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/lugares/vias-ferrocarril.jpg"
+                                        alt="Vías del ferrocarril en Trancas Viejas"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
 
-                        <picture>
-                            <source srcset="img/lugares/calle-principal-atardecer.webp" type="image/webp">
-                            <img src="img/lugares/calle-principal-atardecer.jpg" alt="Comunidad de Trancas Viejas"
-                            loading="lazy">
-                        </picture>
+                            <div class="card-content">
+                                <h3>Nuestra Historia</h3>
 
+                                <p>
+                                    Un espacio dedicado a reunir información sobre los antecedentes
+                                    y la memoria de Trancas Viejas.
+                                </p>
+
+                                <a href="historia.html" class="link-action">
+                                    Explorar historia →
+                                </a>
+                            </div>
+                        </article>
+
+                        <article class="card feature-card">
+                            <div class="card-image-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="img/lugares/vivero-comunitario.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/lugares/vivero-comunitario.jpg"
+                                        alt="Vivero Comunitario de Trancas Viejas"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="card-content">
+                                <h3>Lugares</h3>
+
+                                <p>
+                                    Conoce algunos de los espacios que forman parte del entorno de
+                                    nuestra comunidad.
+                                </p>
+
+                                <a href="lugares.html" class="link-action"> Ver lugares → </a>
+                            </div>
+                        </article>
+
+                        <article class="card feature-card">
+                            <div class="card-image-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="img/eventos/altar-tradicional-todos-santos.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/eventos/altar-tradicional-todos-santos.jpg"
+                                        alt="Altar tradicional de Todos Santos"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="card-content">
+                                <h3>Tradiciones y Fiestas</h3>
+
+                                <p>
+                                    Fotografías y contenido relacionado con las tradiciones y
+                                    actividades de la comunidad.
+                                </p>
+
+                                <a href="eventos.html" class="link-action"> Conocer eventos → </a>
+                            </div>
+                        </article>
+
+                        <article class="card feature-card">
+                            <div class="card-image-wrapper">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/atardecer-cielo-nublado.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/atardecer-cielo-nublado.jpg"
+                                        alt="Atardecer y cielo nublado en Trancas Viejas"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="card-content">
+                                <h3>Archivo Fotográfico</h3>
+
+                                <p>
+                                    Una colección de fotografías de paisajes, naturaleza y distintos
+                                    espacios de Trancas Viejas.
+                                </p>
+
+                                <a href="galeria.html" class="link-action"> Abrir galería → </a>
+                            </div>
+                        </article>
                     </div>
-
                 </div>
+            </section>
 
-            </div>
+            <section class="section bg-light community-quote">
+                <div class="container text-center">
+                    <blockquote class="quote-text">
+                        "Trancas Viejas se construye todos los días con el esfuerzo de su gente, el
+                        trabajo en el campo y la unión de la comunidad."
+                    </blockquote>
 
-        </section>
+                    <cite class="quote-author"> — Comunidad de Trancas Viejas </cite>
+                </div>
+            </section>
 
-        <section class="section" id="descubre">
+            <section class="section bg-light" id="ubicacion">
+                <div class="container">
+                    <div class="location-grid">
+                        <div class="location-text">
+                            <span class="location-kicker"> Ubicación geográfica </span>
 
-            <div class="container">
+                            <h2>Trancas Viejas, Veracruz</h2>
 
-                <div class="section-header text-center">
+                            <p class="location-desc">
+                                Trancas Viejas pertenece al municipio de Moloacán, en el estado de
+                                Veracruz.
+                            </p>
 
-                    <h2>
-                        Descubre Trancas Viejas
-                    </h2>
+                            <div class="routes-block">
+                                <h3>Rutas y accesos principales</h3>
+
+                                <div class="route-simple">
+                                    <strong> Cabecera Municipal </strong>
+
+                                    <span> Moloacán </span>
+                                </div>
+
+                                <div class="route-simple">
+                                    <strong> Villa Cuichapa </strong>
+
+                                    <span> Conexión con localidades cercanas </span>
+                                </div>
+
+                                <div class="route-simple">
+                                    <strong> Vías del Ferrocarril </strong>
+
+                                    <span> Parte del entorno de la comunidad </span>
+                                </div>
+                            </div>
+
+                            <div class="location-actions">
+                                <a
+                                    href="https://maps.google.com/?q=Trancas+Viejas,+Moloacan,+Veracruz"
+                                    target="_blank"
+                                    rel="noopener"
+                                    class="btn btn-primary"
+                                >
+                                    Ver ubicación en Google Maps
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="location-map">
+                            <iframe
+                                src="https://maps.google.com/maps?q=Trancas%20Viejas,%20Moloacan,%20Veracruz&t=m&z=13&ie=UTF8&iwloc=&output=embed"
+                                width="100%"
+                                height="100%"
+                                style="border: 0"
+                                allowfullscreen=""
+                                loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                title="Mapa de Trancas Viejas, Veracruz"
+                            >
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <h3>Trancas Viejas</h3>
 
                     <p>
-                        Conoce algunos de los lugares, paisajes y
-                        tradiciones que forman parte de la comunidad.
+                        Comunidad de Moloacán,
+                        <br />
+                        Veracruz, México.
                     </p>
-
                 </div>
 
-                <div class="grid grid-4">
+                <div class="footer-links">
+                    <h4>Navegación</h4>
 
-                    <article class="card feature-card">
+                    <ul>
+                        <li>
+                            <a href="index.html"> Inicio </a>
+                        </li>
 
-                        <div class="card-image-wrapper">
+                        <li>
+                            <a href="historia.html"> Historia </a>
+                        </li>
 
-                            <picture>
-                                <source srcset="img/lugares/vias-ferrocarril.webp" type="image/webp">
-                                <img src="img/lugares/vias-ferrocarril.jpg" alt="Vías del ferrocarril en Trancas Viejas"
-                                loading="lazy">
-                            </picture>
+                        <li>
+                            <a href="galeria.html"> Galería </a>
+                        </li>
 
-                        </div>
+                        <li>
+                            <a href="lugares.html"> Lugares </a>
+                        </li>
 
-                        <div class="card-content">
-
-                            <h3>
-                                Nuestra Historia
-                            </h3>
-
-                            <p>
-                                Un espacio dedicado a reunir información
-                                sobre los antecedentes y la memoria
-                                de Trancas Viejas.
-                            </p>
-
-                            <a href="historia.html" class="link-action">
-                                Explorar historia →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                    <article class="card feature-card">
-
-                        <div class="card-image-wrapper">
-
-                            <picture>
-                                <source srcset="img/lugares/vivero-comunitario.webp" type="image/webp">
-                                <img src="img/lugares/vivero-comunitario.jpg" alt="Vivero Comunitario de Trancas Viejas"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="card-content">
-
-                            <h3>
-                                Lugares
-                            </h3>
-
-                            <p>
-                                Conoce algunos de los espacios que
-                                forman parte del entorno de nuestra
-                                comunidad.
-                            </p>
-
-                            <a href="lugares.html" class="link-action">
-                                Ver lugares →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                    <article class="card feature-card">
-
-                        <div class="card-image-wrapper">
-
-                            <picture>
-                                <source srcset="img/eventos/altar-tradicional-todos-santos.webp" type="image/webp">
-                                <img src="img/eventos/altar-tradicional-todos-santos.jpg"
-                                alt="Altar tradicional de Todos Santos" loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="card-content">
-
-                            <h3>
-                                Tradiciones y Fiestas
-                            </h3>
-
-                            <p>
-                                Fotografías y contenido relacionado
-                                con las tradiciones y actividades
-                                de la comunidad.
-                            </p>
-
-                            <a href="eventos.html" class="link-action">
-                                Conocer eventos →
-                            </a>
-
-                        </div>
-
-                    </article>
-
-                    <article class="card feature-card">
-
-                        <div class="card-image-wrapper">
-
-                            <picture>
-                                <source srcset="img/galeria/atardecer-cielo-nublado.webp" type="image/webp">
-                                <img src="img/galeria/atardecer-cielo-nublado.jpg"
-                                alt="Atardecer y cielo nublado en Trancas Viejas" loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="card-content">
-
-                            <h3>
-                                Archivo Fotográfico
-                            </h3>
-
-                            <p>
-                                Una colección de fotografías de paisajes,
-                                naturaleza y distintos espacios de
-                                Trancas Viejas.
-                            </p>
-
-                            <a href="galeria.html" class="link-action">
-                                Abrir galería →
-                            </a>
-
-                        </div>
-
-                    </article>
-
+                        <li>
+                            <a href="eventos.html"> Eventos </a>
+                        </li>
+                    </ul>
                 </div>
 
-            </div>
+                <div class="footer-contact">
+                    <h4>Contacto Comunitario</h4>
 
-        </section>
-
-        <section class="section bg-light community-quote">
-
-            <div class="container text-center">
-
-                <blockquote class="quote-text">
-
-                    "Trancas Viejas se construye todos los días con
-                    el esfuerzo de su gente, el trabajo en el campo
-                    y la unión de la comunidad."
-
-                </blockquote>
-
-                <cite class="quote-author">
-                    — Comunidad de Trancas Viejas
-                </cite>
-
-            </div>
-
-        </section>
-
-        <section class="section bg-light" id="ubicacion">
-
-            <div class="container">
-
-                <div class="location-grid">
-
-                    <div class="location-text">
-
-                        <span class="location-kicker">
-                            Ubicación geográfica
-                        </span>
-
-                        <h2>
-                            Trancas Viejas, Veracruz
-                        </h2>
-
-                        <p class="location-desc">
-                            Trancas Viejas pertenece al municipio de
-                            Moloacán, en el estado de Veracruz.
-                        </p>
-
-                        <div class="routes-block">
-
-                            <h3>
-                                Rutas y accesos principales
-                            </h3>
-
-                            <div class="route-simple">
-
-                                <strong>
-                                    Cabecera Municipal
-                                </strong>
-
-                                <span>
-                                    Moloacán
-                                </span>
-
-                            </div>
-
-                            <div class="route-simple">
-
-                                <strong>
-                                    Villa Cuichapa
-                                </strong>
-
-                                <span>
-                                    Conexión con localidades cercanas
-                                </span>
-
-                            </div>
-
-                            <div class="route-simple">
-
-                                <strong>
-                                    Vías del Ferrocarril
-                                </strong>
-
-                                <span>
-                                    Parte del entorno de la comunidad
-                                </span>
-
-                            </div>
-
-                        </div>
-
-                        <div class="location-actions">
-
-                            <a href="https://maps.google.com/?q=Trancas+Viejas,+Moloacan,+Veracruz" target="_blank"
-                                rel="noopener" class="btn btn-primary">
-                                Ver ubicación en Google Maps
-                            </a>
-
-                        </div>
-
-                    </div>
-
-                    <div class="location-map">
-
-                        <iframe
-                            src="https://maps.google.com/maps?q=Trancas%20Viejas,%20Moloacan,%20Veracruz&t=m&z=13&ie=UTF8&iwloc=&output=embed"
-                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
-                            referrerpolicy="no-referrer-when-downgrade" title="Mapa de Trancas Viejas, Veracruz">
-                        </iframe>
-
-                    </div>
-
+                    <p>Portal comunitario e informativo de Trancas Viejas, Moloacán, Veracruz.</p>
                 </div>
-
             </div>
 
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-
-        <div class="container footer-grid">
-
-            <div class="footer-brand">
-
-                <h3>
-                    Trancas Viejas
-                </h3>
-
-                <p>
-                    Comunidad de Moloacán,
-                    <br>
-                    Veracruz, México.
-                </p>
-
+            <div class="footer-bottom container">
+                <p>&copy; 2026 Comunidad de Trancas Viejas. Todos los derechos reservados.</p>
             </div>
+        </footer>
 
-            <div class="footer-links">
-
-                <h4>
-                    Navegación
-                </h4>
-
-                <ul>
-
-                    <li>
-                        <a href="index.html">
-                            Inicio
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="historia.html">
-                            Historia
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="galeria.html">
-                            Galería
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="lugares.html">
-                            Lugares
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="eventos.html">
-                            Eventos
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <div class="footer-contact">
-
-                <h4>
-                    Contacto Comunitario
-                </h4>
-
-                <p>
-                    Portal comunitario e informativo de Trancas Viejas,
-                    Moloacán, Veracruz.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom container">
-
-            <p>
-                &copy; 2026 Comunidad de Trancas Viejas.
-                Todos los derechos reservados.
-            </p>
-
-        </div>
-
-    </footer>
-
-    <script src="js/main.js"></script>
-
-</body>
-
+        <script src="js/main.js"></script>
+    </body>
 </html>

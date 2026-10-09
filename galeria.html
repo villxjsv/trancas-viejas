@@ -1,817 +1,668 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Galería | Trancas Viejas, Veracruz</title>
 
-    <title>Galería | Trancas Viejas, Veracruz</title>
+        <meta
+            name="description"
+            content="Galería fotográfica de paisajes, flora, fauna, cultivos y el entorno de Trancas Viejas, Moloacán, Veracruz."
+        />
 
-    <meta name="description"
-        content="Galería fotográfica de paisajes, flora, fauna, cultivos y el entorno de Trancas Viejas, Moloacán, Veracruz.">
+        <meta property="og:type" content="website" />
+        <meta property="og:site_name" content="Trancas Viejas" />
+        <meta property="og:locale" content="es_MX" />
+        <meta property="og:title" content="Galería | Trancas Viejas, Veracruz" />
+        <meta
+            property="og:description"
+            content="Galería fotográfica de paisajes, flora, fauna, cultivos y el entorno de Trancas Viejas, Moloacán, Veracruz."
+        />
+        <meta property="og:url" content="https://villxjsv.github.io/trancas-viejas/galeria.html" />
+        <meta
+            property="og:image"
+            content="https://villxjsv.github.io/trancas-viejas/img/portada/hero-principal.jpg"
+        />
+        <meta property="og:image:width" content="1600" />
+        <meta property="og:image:height" content="900" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Galería | Trancas Viejas, Veracruz" />
+        <meta
+            name="twitter:description"
+            content="Galería fotográfica de paisajes, flora, fauna, cultivos y el entorno de Trancas Viejas, Moloacán, Veracruz."
+        />
+        <meta
+            name="twitter:image"
+            content="https://villxjsv.github.io/trancas-viejas/img/portada/hero-principal.jpg"
+        />
 
-    <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Trancas Viejas">
-    <meta property="og:locale" content="es_MX">
-    <meta property="og:title" content="Galería | Trancas Viejas, Veracruz">
-    <meta property="og:description"
-        content="Galería fotográfica de paisajes, flora, fauna, cultivos y el entorno de Trancas Viejas, Moloacán, Veracruz.">
-    <meta property="og:url" content="https://villxjsv.github.io/trancas-viejas/galeria.html">
-    <meta property="og:image" content="https://villxjsv.github.io/trancas-viejas/img/portada/hero-principal.jpg">
-    <meta property="og:image:width" content="1600">
-    <meta property="og:image:height" content="900">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Galería | Trancas Viejas, Veracruz">
-    <meta name="twitter:description"
-        content="Galería fotográfica de paisajes, flora, fauna, cultivos y el entorno de Trancas Viejas, Moloacán, Veracruz.">
-    <meta name="twitter:image" content="https://villxjsv.github.io/trancas-viejas/img/portada/hero-principal.jpg">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+            rel="stylesheet"
+        />
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
-        rel="stylesheet">
+        <link rel="icon" href="favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+        <link rel="stylesheet" href="css/styles.css" />
 
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="stylesheet" href="css/styles.css">
-
-    <style>
-
-        .gallery-grid {
-            display: grid !important;
-            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
-            gap: 1.5rem !important;
-            align-items: start !important;
-        }
-
-        .gallery-card {
-            height: auto !important;
-            min-height: 0 !important;
-            align-self: start !important;
-            overflow: hidden !important;
-        }
-
-        .gallery-card-image {
-            width: 100% !important;
-
-            height: 220px !important;
-            min-height: 220px !important;
-            max-height: 220px !important;
-
-            overflow: hidden !important;
-
-            display: flex !important;
-            align-items: center !important;
-            justify-content: center !important;
-
-            background-color: #F4F1EA !important;
-        }
-
-        .gallery-card-image img {
-            width: 100% !important;
-            height: 100% !important;
-
-            object-fit: cover !important;
-
-            object-position: center !important;
-
-            display: block !important;
-
-            transition:
-                transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
-        }
-
-        .gallery-card-image img.img-top {
-            object-position: center top !important;
-        }
-
-        .gallery-card-body {
-            height: auto !important;
-            min-height: 0 !important;
-
-            flex: none !important;
-
-            padding: 1.2rem !important;
-        }
-
-        .gallery-card-body h3 {
-            margin-bottom: 0.45rem;
-        }
-
-        .gallery-card-body p {
-            margin: 0;
-            flex: none !important;
-        }
-
-        @media (hover: hover) and (pointer: fine) {
-
-            .gallery-card:hover {
-                transform: translateY(-8px) !important;
-
-                box-shadow:
-                    0 16px 30px -10px rgba(0, 0, 0, 0.15) !important;
-
-                border-color: #2C5F2D !important;
-            }
-
-            .gallery-card:hover .gallery-card-image img {
-                transform: scale(1.06) !important;
-            }
-
-        }
-
-        @media (max-width: 1023px) {
-
+        <style>
             .gallery-grid {
-                grid-template-columns:
-                    repeat(2, minmax(0, 1fr)) !important;
+                display: grid !important;
+                grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+                gap: 1.5rem !important;
+                align-items: start !important;
             }
 
-        }
-
-        @media (max-width: 600px) {
-
-            .gallery-grid {
-                grid-template-columns: 1fr !important;
-                gap: 1.25rem !important;
+            .gallery-card {
+                height: auto !important;
+                min-height: 0 !important;
+                align-self: start !important;
+                overflow: hidden !important;
             }
 
             .gallery-card-image {
-                height: 230px !important;
-                min-height: 230px !important;
-                max-height: 230px !important;
+                width: 100% !important;
+
+                height: 220px !important;
+                min-height: 220px !important;
+                max-height: 220px !important;
+
+                overflow: hidden !important;
+
+                display: flex !important;
+                align-items: center !important;
+                justify-content: center !important;
+
+                background-color: #f4f1ea !important;
             }
 
-        }
-    </style>
-</head>
+            .gallery-card-image img {
+                width: 100% !important;
+                height: 100% !important;
 
-<body>
+                object-fit: cover !important;
 
-    <header class="site-header">
+                object-position: center !important;
 
-        <div class="container header-container">
+                display: block !important;
 
-            <a href="index.html" class="logo">
-                Trancas Viejas
-            </a>
+                transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            }
 
-            <button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false" aria-label="Mostrar menú">
+            .gallery-card-image img.img-top {
+                object-position: center top !important;
+            }
 
-                <span class="hamburger"></span>
+            .gallery-card-body {
+                height: auto !important;
+                min-height: 0 !important;
 
-            </button>
+                flex: none !important;
 
-            <nav class="site-nav" id="primary-menu" aria-label="Navegación principal">
+                padding: 1.2rem !important;
+            }
 
-                <ul class="nav-list">
+            .gallery-card-body h3 {
+                margin-bottom: 0.45rem;
+            }
 
-                    <li>
-                        <a href="index.html">
-                            Inicio
-                        </a>
-                    </li>
+            .gallery-card-body p {
+                margin: 0;
+                flex: none !important;
+            }
 
-                    <li>
-                        <a href="historia.html">
-                            Historia
-                        </a>
-                    </li>
+            @media (hover: hover) and (pointer: fine) {
+                .gallery-card:hover {
+                    transform: translateY(-8px) !important;
 
-                    <li>
-                        <a href="galeria.html" class="active">
-                            Galería
-                        </a>
-                    </li>
+                    box-shadow: 0 16px 30px -10px rgba(0, 0, 0, 0.15) !important;
 
-                    <li>
-                        <a href="lugares.html">
-                            Lugares
-                        </a>
-                    </li>
+                    border-color: #2c5f2d !important;
+                }
 
-                    <li>
-                        <a href="eventos.html">
-                            Eventos
-                        </a>
-                    </li>
+                .gallery-card:hover .gallery-card-image img {
+                    transform: scale(1.06) !important;
+                }
+            }
 
-                </ul>
+            @media (max-width: 1023px) {
+                .gallery-grid {
+                    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+                }
+            }
 
-            </nav>
+            @media (max-width: 600px) {
+                .gallery-grid {
+                    grid-template-columns: 1fr !important;
+                    gap: 1.25rem !important;
+                }
 
-        </div>
+                .gallery-card-image {
+                    height: 230px !important;
+                    min-height: 230px !important;
+                    max-height: 230px !important;
+                }
+            }
+        </style>
+    </head>
 
-    </header>
+    <body>
+        <header class="site-header">
+            <div class="container header-container">
+                <a href="index.html" class="logo"> Trancas Viejas </a>
 
-    <main>
+                <button
+                    class="menu-toggle"
+                    aria-controls="primary-menu"
+                    aria-expanded="false"
+                    aria-label="Mostrar menú"
+                >
+                    <span class="hamburger"></span>
+                </button>
 
-        <section class="page-header section bg-light text-center">
+                <nav class="site-nav" id="primary-menu" aria-label="Navegación principal">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="index.html"> Inicio </a>
+                        </li>
 
-            <div class="container">
+                        <li>
+                            <a href="historia.html"> Historia </a>
+                        </li>
 
-                <span class="kicker">
-                    Rincones y Paisajes
-                </span>
+                        <li>
+                            <a href="galeria.html" class="active"> Galería </a>
+                        </li>
 
-                <h1>
-                    Galería Fotográfica
-                </h1>
+                        <li>
+                            <a href="lugares.html"> Lugares </a>
+                        </li>
 
-                <p class="text-muted">
-                    Registro visual de la naturaleza, el entorno rural,
-                    cultivos y la vida en Trancas Viejas.
-                </p>
-
+                        <li>
+                            <a href="eventos.html"> Eventos </a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
-
-        </section>
-
-        <section class="section">
-
-            <div class="container">
-
-                <div class="gallery-grid">
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/atardecer-potreros.webp" type="image/webp">
-                                <img src="img/galeria/atardecer-potreros.jpg"
-                                alt="Atardecer en los potreros de Trancas Viejas" loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Atardecer en Potreros
-                            </h3>
-
-                            <p>
-                                Vista del atardecer sobre los campos
-                                y colinas de la comunidad.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/atardecer-cielo-nublado.webp" type="image/webp">
-                                <img src="img/galeria/atardecer-cielo-nublado.jpg" alt="Atardecer y cielo nublado"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Atardecer y Cielo Nublado
-                            </h3>
-
-                            <p>
-                                Panorámica del cielo al caer la tarde
-                                sobre el entorno local.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/cielo-luna-creciente.webp" type="image/webp">
-                                <img src="img/galeria/cielo-luna-creciente.jpg" alt="Luna creciente sobre Trancas Viejas"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Luna Creciente
-                            </h3>
-
-                            <p>
-                                Detalle del cielo nocturno sobre
-                                la localidad.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/paisaje-camino-cielo.webp" type="image/webp">
-                                <img src="img/galeria/paisaje-camino-cielo.jpg" alt="Camino y paisaje local" loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Camino y Entorno Natural
-                            </h3>
-
-                            <p>
-                                Paisaje habitual de los accesos
-                                a la comunidad.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/praderas-verdes.webp" type="image/webp">
-                                <img src="img/galeria/praderas-verdes.jpg" alt="Praderas verdes de Trancas Viejas"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Praderas Verdes
-                            </h3>
-
-                            <p>
-                                Paisaje de las áreas verdes y
-                                vegetación del ejido.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/fauna-tecolote-nocturno.webp" type="image/webp">
-                                <img src="img/galeria/fauna-tecolote-nocturno.jpg" alt="Tecolote nocturno en Trancas Viejas"
-                                class="img-top" loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Fauna Local
-                            </h3>
-
-                            <p>
-                                Registro de un tecolote durante
-                                la noche en la zona.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/flora-flores-moradas.webp" type="image/webp">
-                                <img src="img/galeria/flora-flores-moradas.jpg" alt="Flora local con flores moradas"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Flora Regional
-                            </h3>
-
-                            <p>
-                                Ejemplar de floración morada
-                                de la vegetación local.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/flora-morada-cielo.webp" type="image/webp">
-                                <img src="img/galeria/flora-morada-cielo.jpg" alt="Flores moradas contra el cielo"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Floración y Cielo
-                            </h3>
-
-                            <p>
-                                Detalle de la vegetación
-                                del entorno veracruzano.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/flora-pomarrosa.webp" type="image/webp">
-                                <img src="img/galeria/flora-pomarrosa.jpg" alt="Flor de pomarrosa local" loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Flor de Pomarrosa
-                            </h3>
-
-                            <p>
-                                Detalle de una flor de árbol
-                                frutal de la región.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/arcoiris-camino-palmeras.webp" type="image/webp">
-                                <img src="img/galeria/arcoiris-camino-palmeras.jpg"
-                                alt="Arcoíris sobre el camino de la comunidad" loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Arcoíris en el Camino
-                            </h3>
-
-                            <p>
-                                Arcoíris sobre el camino y
-                                el paisaje de la comunidad.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/cosecha-mazorca-maiz.webp" type="image/webp">
-                                <img src="img/galeria/cosecha-mazorca-maiz.jpg" alt="Mazorca de maíz" loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Maíz del Campo
-                            </h3>
-
-                            <p>
-                                Muestra de una cosecha de maíz
-                                de las parcelas locales.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/cosecha-yuca-campo.webp" type="image/webp">
-                                <img src="img/galeria/cosecha-yuca-campo.jpg" alt="Cosecha de yuca" loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Cosecha de Yuca
-                            </h3>
-
-                            <p>
-                                Producto agrícola obtenido
-                                del trabajo en el campo.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/cultivo-milpa-maiz.webp" type="image/webp">
-                                <img src="img/galeria/cultivo-milpa-maiz.jpg" alt="Milpa y sembradíos" loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Sembradíos y Milpas
-                            </h3>
-
-                            <p>
-                                Vista de áreas destinadas
-                                al cultivo agrícola.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/atardecer-calido-camino.webp" type="image/webp">
-                                <img src="img/galeria/atardecer-calido-camino.jpg" alt="Atardecer en la comunidad"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Atardecer en la Loma
-                            </h3>
-
-                            <p>
-                                Puesta de sol sobre el paisaje
-                                de la comunidad.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/cielo-azul-nubes-campo.webp" type="image/webp">
-                                <img src="img/galeria/cielo-azul-nubes-campo.jpg" alt="Cielo azul con nubes sobre el campo"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Cielo Azul y Horizonte
-                            </h3>
-
-                            <p>
-                                Vista panorámica del paisaje
-                                bajo un cielo despejado.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/cielo-rayos-sol-nubes.webp" type="image/webp">
-                                <img src="img/galeria/cielo-rayos-sol-nubes.jpg" alt="Rayos de sol entre las nubes"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Contraluz Solar
-                            </h3>
-
-                            <p>
-                                El sol abriéndose paso
-                                entre las nubes.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/luna-fase-nitida.webp" type="image/webp">
-                                <img src="img/galeria/luna-fase-nitida.jpg" alt="Fotografía detallada de la luna"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Noche de Luna
-                            </h3>
-
-                            <p>
-                                Registro nocturno del cielo
-                                sobre la comunidad.
-                            </p>
-
-                        </div>
-
-                    </article>
-
-                    <article class="gallery-card">
-
-                        <div class="gallery-card-image">
-
-                            <picture>
-                                <source srcset="img/galeria/atardecer-crepusculo-oscuro.webp" type="image/webp">
-                                <img src="img/galeria/atardecer-crepusculo-oscuro.jpg" alt="Crepúsculo en el horizonte"
-                                loading="lazy">
-                            </picture>
-
-                        </div>
-
-                        <div class="gallery-card-body">
-
-                            <h3>
-                                Crepúsculo Ejidal
-                            </h3>
-
-                            <p>
-                                Últimos destellos de luz
-                                sobre la vegetación.
-                            </p>
-
-                        </div>
-
-                    </article>
-
+        </header>
+
+        <main>
+            <section class="page-header section bg-light text-center">
+                <div class="container">
+                    <span class="kicker"> Rincones y Paisajes </span>
+
+                    <h1>Galería Fotográfica</h1>
+
+                    <p class="text-muted">
+                        Registro visual de la naturaleza, el entorno rural, cultivos y la vida en
+                        Trancas Viejas.
+                    </p>
+                </div>
+            </section>
+
+            <section class="section">
+                <div class="container">
+                    <div class="gallery-grid">
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/atardecer-potreros.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/atardecer-potreros.jpg"
+                                        alt="Atardecer en los potreros de Trancas Viejas"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Atardecer en Potreros</h3>
+
+                                <p>
+                                    Vista del atardecer sobre los campos y colinas de la comunidad.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/atardecer-cielo-nublado.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/atardecer-cielo-nublado.jpg"
+                                        alt="Atardecer y cielo nublado"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Atardecer y Cielo Nublado</h3>
+
+                                <p>Panorámica del cielo al caer la tarde sobre el entorno local.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/cielo-luna-creciente.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/cielo-luna-creciente.jpg"
+                                        alt="Luna creciente sobre Trancas Viejas"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Luna Creciente</h3>
+
+                                <p>Detalle del cielo nocturno sobre la localidad.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/paisaje-camino-cielo.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/paisaje-camino-cielo.jpg"
+                                        alt="Camino y paisaje local"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Camino y Entorno Natural</h3>
+
+                                <p>Paisaje habitual de los accesos a la comunidad.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/praderas-verdes.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/praderas-verdes.jpg"
+                                        alt="Praderas verdes de Trancas Viejas"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Praderas Verdes</h3>
+
+                                <p>Paisaje de las áreas verdes y vegetación del ejido.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/fauna-tecolote-nocturno.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/fauna-tecolote-nocturno.jpg"
+                                        alt="Tecolote nocturno en Trancas Viejas"
+                                        class="img-top"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Fauna Local</h3>
+
+                                <p>Registro de un tecolote durante la noche en la zona.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/flora-flores-moradas.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/flora-flores-moradas.jpg"
+                                        alt="Flora local con flores moradas"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Flora Regional</h3>
+
+                                <p>Ejemplar de floración morada de la vegetación local.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/flora-morada-cielo.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/flora-morada-cielo.jpg"
+                                        alt="Flores moradas contra el cielo"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Floración y Cielo</h3>
+
+                                <p>Detalle de la vegetación del entorno veracruzano.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/flora-pomarrosa.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/flora-pomarrosa.jpg"
+                                        alt="Flor de pomarrosa local"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Flor de Pomarrosa</h3>
+
+                                <p>Detalle de una flor de árbol frutal de la región.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/arcoiris-camino-palmeras.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/arcoiris-camino-palmeras.jpg"
+                                        alt="Arcoíris sobre el camino de la comunidad"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Arcoíris en el Camino</h3>
+
+                                <p>Arcoíris sobre el camino y el paisaje de la comunidad.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/cosecha-mazorca-maiz.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/cosecha-mazorca-maiz.jpg"
+                                        alt="Mazorca de maíz"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Maíz del Campo</h3>
+
+                                <p>Muestra de una cosecha de maíz de las parcelas locales.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/cosecha-yuca-campo.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/cosecha-yuca-campo.jpg"
+                                        alt="Cosecha de yuca"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Cosecha de Yuca</h3>
+
+                                <p>Producto agrícola obtenido del trabajo en el campo.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/cultivo-milpa-maiz.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/cultivo-milpa-maiz.jpg"
+                                        alt="Milpa y sembradíos"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Sembradíos y Milpas</h3>
+
+                                <p>Vista de áreas destinadas al cultivo agrícola.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/atardecer-calido-camino.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/atardecer-calido-camino.jpg"
+                                        alt="Atardecer en la comunidad"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Atardecer en la Loma</h3>
+
+                                <p>Puesta de sol sobre el paisaje de la comunidad.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/cielo-azul-nubes-campo.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/cielo-azul-nubes-campo.jpg"
+                                        alt="Cielo azul con nubes sobre el campo"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Cielo Azul y Horizonte</h3>
+
+                                <p>Vista panorámica del paisaje bajo un cielo despejado.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/cielo-rayos-sol-nubes.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/cielo-rayos-sol-nubes.jpg"
+                                        alt="Rayos de sol entre las nubes"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Contraluz Solar</h3>
+
+                                <p>El sol abriéndose paso entre las nubes.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/luna-fase-nitida.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/luna-fase-nitida.jpg"
+                                        alt="Fotografía detallada de la luna"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Noche de Luna</h3>
+
+                                <p>Registro nocturno del cielo sobre la comunidad.</p>
+                            </div>
+                        </article>
+
+                        <article class="gallery-card">
+                            <div class="gallery-card-image">
+                                <picture>
+                                    <source
+                                        srcset="img/galeria/atardecer-crepusculo-oscuro.webp"
+                                        type="image/webp"
+                                    />
+                                    <img
+                                        src="img/galeria/atardecer-crepusculo-oscuro.jpg"
+                                        alt="Crepúsculo en el horizonte"
+                                        loading="lazy"
+                                    />
+                                </picture>
+                            </div>
+
+                            <div class="gallery-card-body">
+                                <h3>Crepúsculo Ejidal</h3>
+
+                                <p>Últimos destellos de luz sobre la vegetación.</p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <h3>Trancas Viejas</h3>
+
+                    <p>
+                        Comunidad de Moloacán,<br />
+                        Veracruz, México.
+                    </p>
                 </div>
 
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+
+                    <ul>
+                        <li>
+                            <a href="index.html"> Inicio </a>
+                        </li>
+
+                        <li>
+                            <a href="historia.html"> Historia </a>
+                        </li>
+
+                        <li>
+                            <a href="galeria.html"> Galería </a>
+                        </li>
+
+                        <li>
+                            <a href="lugares.html"> Lugares </a>
+                        </li>
+
+                        <li>
+                            <a href="eventos.html"> Eventos </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contacto Comunitario</h4>
+
+                    <p>
+                        Portal comunitario e informativo del Ejido Trancas Viejas, Moloacán,
+                        Veracruz.
+                    </p>
+                </div>
             </div>
 
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-
-        <div class="container footer-grid">
-
-            <div class="footer-brand">
-
-                <h3>
-                    Trancas Viejas
-                </h3>
-
-                <p>
-                    Comunidad de Moloacán,<br>
-                    Veracruz, México.
-                </p>
-
+            <div class="footer-bottom container">
+                <p>&copy; 2026 Comunidad de Trancas Viejas. Todos los derechos reservados.</p>
             </div>
+        </footer>
 
-            <div class="footer-links">
-
-                <h4>
-                    Navegación
-                </h4>
-
-                <ul>
-
-                    <li>
-                        <a href="index.html">
-                            Inicio
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="historia.html">
-                            Historia
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="galeria.html">
-                            Galería
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="lugares.html">
-                            Lugares
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="eventos.html">
-                            Eventos
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <div class="footer-contact">
-
-                <h4>
-                    Contacto Comunitario
-                </h4>
-
-                <p>
-                    Portal comunitario e informativo del
-                    Ejido Trancas Viejas, Moloacán, Veracruz.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom container">
-
-            <p>
-                &copy; 2026 Comunidad de Trancas Viejas.
-                Todos los derechos reservados.
-            </p>
-
-        </div>
-
-    </footer>
-
-    <script src="js/main.js"></script>
-
-</body>
-
+        <script src="js/main.js"></script>
+    </body>
 </html>

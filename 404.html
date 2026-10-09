@@ -1,214 +1,146 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <base href="https://villxjsv.github.io/trancas-viejas/" />
 
-    <base href="https://villxjsv.github.io/trancas-viejas/">
+        <title>Página no encontrada (404) | Trancas Viejas</title>
 
-    <title>Página no encontrada (404) | Trancas Viejas</title>
+        <meta
+            name="description"
+            content="Lo sentimos, la página que buscas no existe. Vuelve al inicio o explora la galería, lugares y eventos de Trancas Viejas, Veracruz."
+        />
+        <meta name="robots" content="noindex, follow" />
 
-    <meta name="description"
-        content="Lo sentimos, la página que buscas no existe. Vuelve al inicio o explora la galería, lugares y eventos de Trancas Viejas, Veracruz.">
-    <meta name="robots" content="noindex, follow">
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
+            rel="stylesheet"
+        />
 
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&display=swap"
-        rel="stylesheet">
+        <link rel="icon" href="favicon.ico" sizes="any" />
+        <link rel="icon" type="image/png" href="favicon.png" />
+        <link rel="apple-touch-icon" href="apple-touch-icon.png" />
 
-    <link rel="icon" href="favicon.ico" sizes="any">
-    <link rel="icon" type="image/png" href="favicon.png">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link rel="stylesheet" href="css/styles.css" />
+    </head>
 
-    <link rel="stylesheet" href="css/styles.css">
-</head>
+    <body>
+        <header class="site-header">
+            <div class="container header-container">
+                <a href="index.html" class="logo"> Trancas Viejas </a>
 
-<body>
+                <button
+                    class="menu-toggle"
+                    type="button"
+                    aria-controls="primary-menu"
+                    aria-expanded="false"
+                    aria-label="Mostrar menú"
+                >
+                    <span class="hamburger"></span>
+                </button>
 
-    <header class="site-header">
+                <nav class="site-nav" id="primary-menu">
+                    <ul class="nav-list">
+                        <li>
+                            <a href="index.html"> Inicio </a>
+                        </li>
 
-        <div class="container header-container">
+                        <li>
+                            <a href="historia.html"> Historia </a>
+                        </li>
 
-            <a href="index.html" class="logo">
-                Trancas Viejas
-            </a>
+                        <li>
+                            <a href="galeria.html"> Galería </a>
+                        </li>
 
-            <button class="menu-toggle" type="button" aria-controls="primary-menu" aria-expanded="false"
-                aria-label="Mostrar menú">
-                <span class="hamburger"></span>
-            </button>
+                        <li>
+                            <a href="lugares.html"> Lugares </a>
+                        </li>
 
-            <nav class="site-nav" id="primary-menu">
+                        <li>
+                            <a href="eventos.html"> Eventos </a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
 
-                <ul class="nav-list">
+        <main>
+            <section class="page-header bg-light text-center">
+                <div class="container">
+                    <span class="section-kicker"> Error 404 </span>
 
-                    <li>
-                        <a href="index.html">
-                            Inicio
-                        </a>
-                    </li>
+                    <h1>Página no encontrada</h1>
 
-                    <li>
-                        <a href="historia.html">
-                            Historia
-                        </a>
-                    </li>
+                    <p class="text-muted">
+                        Lo sentimos, la página que buscas no existe o cambió de dirección. Vuelve al
+                        inicio o visita alguna de estas secciones.
+                    </p>
 
-                    <li>
-                        <a href="galeria.html">
-                            Galería
-                        </a>
-                    </li>
+                    <div class="hero-actions" style="justify-content: center; margin-top: 1.75rem">
+                        <a class="btn btn-primary" href="index.html"> Volver al inicio </a>
 
-                    <li>
-                        <a href="lugares.html">
-                            Lugares
-                        </a>
-                    </li>
+                        <a class="btn btn-outline" href="galeria.html"> Ver la galería </a>
+                    </div>
+                </div>
+            </section>
+        </main>
 
-                    <li>
-                        <a href="eventos.html">
-                            Eventos
-                        </a>
-                    </li>
+        <footer class="site-footer">
+            <div class="container footer-grid">
+                <div class="footer-brand">
+                    <h3>Trancas Viejas</h3>
 
-                </ul>
-
-            </nav>
-
-        </div>
-
-    </header>
-
-    <main>
-
-        <section class="page-header bg-light text-center">
-
-            <div class="container">
-
-                <span class="section-kicker">
-                    Error 404
-                </span>
-
-                <h1>
-                    Página no encontrada
-                </h1>
-
-                <p class="text-muted">
-                    Lo sentimos, la página que buscas no existe o cambió de dirección.
-                    Vuelve al inicio o visita alguna de estas secciones.
-                </p>
-
-                <div class="hero-actions" style="justify-content: center; margin-top: 1.75rem;">
-
-                    <a class="btn btn-primary" href="index.html">
-                        Volver al inicio
-                    </a>
-
-                    <a class="btn btn-outline" href="galeria.html">
-                        Ver la galería
-                    </a>
-
+                    <p>
+                        Comunidad de Moloacán,
+                        <br />
+                        Veracruz, México.
+                    </p>
                 </div>
 
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+
+                    <ul>
+                        <li>
+                            <a href="index.html"> Inicio </a>
+                        </li>
+
+                        <li>
+                            <a href="historia.html"> Historia </a>
+                        </li>
+
+                        <li>
+                            <a href="galeria.html"> Galería </a>
+                        </li>
+
+                        <li>
+                            <a href="lugares.html"> Lugares </a>
+                        </li>
+
+                        <li>
+                            <a href="eventos.html"> Eventos </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer-contact">
+                    <h4>Contacto Comunitario</h4>
+
+                    <p>Portal comunitario e informativo de Trancas Viejas, Moloacán, Veracruz.</p>
+                </div>
             </div>
 
-        </section>
-
-    </main>
-
-    <footer class="site-footer">
-
-        <div class="container footer-grid">
-
-            <div class="footer-brand">
-
-                <h3>
-                    Trancas Viejas
-                </h3>
-
-                <p>
-                    Comunidad de Moloacán,
-                    <br>
-                    Veracruz, México.
-                </p>
-
+            <div class="footer-bottom container">
+                <p>&copy; 2026 Comunidad de Trancas Viejas. Todos los derechos reservados.</p>
             </div>
+        </footer>
 
-            <div class="footer-links">
-
-                <h4>
-                    Navegación
-                </h4>
-
-                <ul>
-
-                    <li>
-                        <a href="index.html">
-                            Inicio
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="historia.html">
-                            Historia
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="galeria.html">
-                            Galería
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="lugares.html">
-                            Lugares
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="eventos.html">
-                            Eventos
-                        </a>
-                    </li>
-
-                </ul>
-
-            </div>
-
-            <div class="footer-contact">
-
-                <h4>
-                    Contacto Comunitario
-                </h4>
-
-                <p>
-                    Portal comunitario e informativo de Trancas Viejas,
-                    Moloacán, Veracruz.
-                </p>
-
-            </div>
-
-        </div>
-
-        <div class="footer-bottom container">
-
-            <p>
-                &copy; 2026 Comunidad de Trancas Viejas.
-                Todos los derechos reservados.
-            </p>
-
-        </div>
-
-    </footer>
-
-    <script src="js/main.js"></script>
-
-</body>
-
+        <script src="js/main.js"></script>
+    </body>
 </html>

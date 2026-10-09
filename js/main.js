@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', () => {
-
     const menuToggle = document.querySelector('.menu-toggle');
     const siteNav = document.querySelector('.site-nav');
     const navLinks = document.querySelectorAll('.nav-list a');
 
     if (menuToggle && siteNav) {
-
         const toggleMenu = () => {
             const isOpen = siteNav.classList.contains('is-open');
 
@@ -22,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         menuToggle.addEventListener('click', toggleMenu);
 
-        navLinks.forEach(link => {
+        navLinks.forEach((link) => {
             link.addEventListener('click', () => {
                 if (siteNav.classList.contains('is-open')) {
                     toggleMenu();
@@ -32,13 +30,10 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     const galleryImages = Array.from(
-        document.querySelectorAll(
-            '.gallery-card-image img, .card-image-wrapper img'
-        )
+        document.querySelectorAll('.gallery-card-image img, .card-image-wrapper img')
     );
 
     if (galleryImages.length > 0) {
-
         const lightbox = document.createElement('div');
         lightbox.className = 'lightbox';
         lightbox.setAttribute('role', 'dialog');
@@ -151,22 +146,20 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const prefersReducedMotion =
-        window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     const revealTargets = Array.from(
         document.querySelectorAll(
             '.section-header, .intro-text, .intro-image, ' +
-            '.card, .gallery-card, .timeline-item, ' +
-            '.history-text-block, .history-portrait-card, ' +
-            '.community-quote .container > *, ' +
-            '.location-text, .location-map, .routes-block, ' +
-            '.page-header .container > *'
+                '.card, .gallery-card, .timeline-item, ' +
+                '.history-text-block, .history-portrait-card, ' +
+                '.community-quote .container > *, ' +
+                '.location-text, .location-map, .routes-block, ' +
+                '.page-header .container > *'
         )
     );
 
     if (revealTargets.length > 0 && !prefersReducedMotion && 'IntersectionObserver' in window) {
-
         revealTargets.forEach((el) => el.classList.add('reveal'));
 
         const groups = new Map();
@@ -188,14 +181,17 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
 
-        const revealObserver = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('is-visible');
-                    revealObserver.unobserve(entry.target);
-                }
-            });
-        }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+        const revealObserver = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('is-visible');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            },
+            { rootMargin: '0px 0px -8% 0px', threshold: 0.08 }
+        );
 
         revealTargets.forEach((el) => revealObserver.observe(el));
     }
@@ -231,5 +227,4 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('scroll', onScroll, { passive: true });
     onScroll();
-
 });

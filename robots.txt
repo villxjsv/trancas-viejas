@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://villxjsv.github.io/trancas-viejas/sitemap.xml

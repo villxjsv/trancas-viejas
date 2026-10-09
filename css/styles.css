@@ -2072,3 +2072,110 @@ p {
         max-height: 68vh;
     }
 }
+
+
+/* ==========================================================================
+   MEJORAS DE ACABADO
+   1. Revelado suave al hacer scroll
+   2. Boton "volver arriba"
+   6. Sombra del encabezado al hacer scroll
+   ========================================================================== */
+
+/* 1. Revelado suave al hacer scroll */
+.reveal {
+    opacity: 0;
+    transform: translateY(22px);
+
+    transition:
+        opacity 0.6s ease,
+        transform 0.6s cubic-bezier(0.22, 0.7, 0.2, 1);
+
+    will-change: opacity, transform;
+}
+
+.reveal.is-visible {
+    opacity: 1;
+    transform: none;
+}
+
+/* 6. Sombra del encabezado al hacer scroll */
+.site-header {
+    transition:
+        box-shadow 0.3s ease,
+        background-color 0.3s ease;
+}
+
+.site-header.is-scrolled {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.10);
+}
+
+/* 2. Boton "volver arriba" */
+.back-to-top {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 90;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    border-radius: 50%;
+
+    color: #FFFFFF;
+    background: var(--color-primary);
+
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.22);
+
+    cursor: pointer;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(12px);
+
+    transition:
+        opacity 0.3s ease,
+        transform 0.3s ease,
+        visibility 0.3s ease,
+        background-color 0.25s ease;
+}
+
+.back-to-top.is-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+}
+
+.back-to-top:hover {
+    background: var(--color-primary-dark);
+
+    transform: translateY(-2px);
+}
+
+.back-to-top svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 480px) {
+
+    .back-to-top {
+        right: 0.9rem;
+        bottom: 0.9rem;
+
+        width: 42px;
+        height: 42px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+    .reveal {
+        opacity: 1 !important;
+        transform: none !important;
+    }
+}

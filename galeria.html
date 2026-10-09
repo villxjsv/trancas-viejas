@@ -82,10 +82,11 @@
             height: 100% !important;
 
             /*
-             * contain evita que las fotografías verticales
-             * se recorten de forma exagerada.
+             * cover hace que TODAS las fotos llenen el marco,
+             * recortando un poco los bordes. Así la galería se ve
+             * uniforme y profesional, igual que la sección Lugares.
              */
-            object-fit: contain !important;
+            object-fit: cover !important;
 
             object-position: center !important;
 
@@ -93,6 +94,17 @@
 
             transition:
                 transform 0.5s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+
+
+        /*
+         * Encuadre superior.
+         * Para fotos verticales cuyo sujeto importante está arriba
+         * (por ejemplo, la cabeza del tecolote), así nunca se corta.
+         */
+
+        .gallery-card-image img.img-top {
+            object-position: center top !important;
         }
 
 
@@ -434,7 +446,7 @@
                         <div class="gallery-card-image">
 
                             <img src="img/galeria/fauna-tecolote-nocturno.jpg" alt="Tecolote nocturno en Trancas Viejas"
-                                loading="lazy">
+                                class="img-top" loading="lazy">
 
                         </div>
 

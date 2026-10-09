@@ -816,7 +816,8 @@ p {
    que las imágenes se mostraban a tamaño natural y las tarjetas
    quedaban con alturas distintas (sobre todo en el teléfono).
    Con estas reglas todas las tarjetas de la galería mantienen
-   el mismo alto y las fotos usan object-fit: contain.
+   el mismo alto y las fotos usan object-fit: cover para llenar
+   el marco (recortando un poco los bordes), igual que en Lugares.
 */
 
 .gallery-card-image {
@@ -838,7 +839,7 @@ p {
     width: 100%;
     height: 100%;
 
-    object-fit: contain;
+    object-fit: cover;
     object-position: center;
 
     transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);

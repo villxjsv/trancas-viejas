@@ -1,6 +1,6 @@
 /**
  * TRANCAS VIEJAS - Archivo JavaScript Principal
- * Contiene la lógica del menú móvil accesible y la prevención del envío del formulario de contacto.
+ * Contiene la lógica del menú móvil accesible.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -48,17 +48,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 toggleMenu();
                 menuToggle.focus(); // Retorna el foco al botón de menú para usuarios de teclado
             }
-        });
-    }
-
-    // ==========================================
-    // 2. FORMULARIO DE CONTACTO (MANEJO VISUAL)
-    // ==========================================
-    const contactForm = document.getElementById('contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
         });
     }
 

@@ -23,7 +23,6 @@ trancas-viejas/
 ├── galeria.html
 ├── lugares.html
 ├── eventos.html
-├── contacto.html
 │
 ├── css/
 │   └── styles.css
@@ -179,10 +178,6 @@ Presenta sitios representativos de la comunidad.
 
 Presenta festividades, actividades y acontecimientos comunitarios.
 
-### Contacto
-
-Contiene información de referencia y un formulario visual de contacto.
-
 ## Desarrollo local
 
 Para visualizar el proyecto localmente se recomienda utilizar la extensión **Live Server** de Visual Studio Code.
@@ -193,7 +188,7 @@ También es posible abrir `index.html` directamente en un navegador, aunque Live
 
 El proyecto cuenta con:
 
-* Estructura de seis páginas.
+* Estructura de cinco páginas.
 * Navegación funcional.
 * Diseño responsive.
 * Menú móvil.
